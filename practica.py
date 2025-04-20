@@ -73,3 +73,10 @@ reporte['IMC_nulo'] = df['IMC'].isna().sum()
 df['Clasificacion_Presion'] = df.apply(lambda x: clasificar_presion(x['Presion_Sistolica'], x['Presion_Diastolica']),axis=1)
 reporte['Clasificacion_Presion_nulo'] = df['Clasificacion_Presion'].isna().sum()
 
+# mostrar resumen general
+mostrar_reporte(reporte)
+print(pd)
+
+# Exportar resultados
+df.to_csv('pacientes_limpio.csv', index=False, encoding='utf-8-sig')
+exportar_reporte_csv(reporte)
