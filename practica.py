@@ -8,34 +8,32 @@ from reporte_transformaciones import *
 # 2. Extracción de datos
 df = pd.read_csv('pacientes_sucio.csv', encoding='latin1') # Lectura del excel, se utiliza latin1 para leer caracteres especiales
 
-# Configuración y visualización de los 5 primeros datos con todas sus columnas
-pd.set_option('display.max_columns', None) # Se configura pandas para que muestre todas las columnas
-print("Primeras filas del dataset original:") # Mensaje genérico para avisar lo que se visualizara despues (La tabla)
-print(df.head()) # Se visualiza todas las columnas con sus filas, por defecto mostrará 5 columnas mediante el head
+pd.set_option('display.max_columns', None)
+print("Primeras filas del dataset original:")
+print(df.head())
 
-# Configuración y visualización de todos los datos con todas sus columnas
-pd.set_option('display.max_rows', None) # Se configura Pandas para que muestre todas las filas tambien
-print("Se muestran todas los registros del dataset original:") # Mensaje genérico para avisar lo que se visualizara despues (La tabla)
-print(df) # Instrucción para mostrar lo leido anteriormente Filas y columnas
+pd.set_option('display.max_rows', None)
+print("Se muestran todas los registros del dataset original:")
+print(df)
 
 reporte = inicializar_reporte(df)
 
 # 3. Proceso tratamiento de datos
 # 3.1 Registros duplicados
-df = df.drop_duplicates() #Elimina únicamente las filas que son identicas
+df = df.drop_duplicates()
 
 # 3.2 Limpieza columnas
 # 3.2.1 Limpieza de edad
 edad_antes = df['Edad'].copy()
-df['Edad'] = df['Edad'].apply(limpiar_edad) # La funcion definida limpiar edad (Pasa texto a número)
-df['Edad'] = df['Edad'].apply(lambda x: abs(x) if x < 120 else np.nan) # Todo número negativo pasa a positivo, si es mayor a 120 es eliminado
+df['Edad'] = df['Edad'].apply(limpiar_edad)
+df['Edad'] = df['Edad'].apply(lambda x: abs(x) if x < 120 else np.nan)
 reporte['Edad_transformadas'] = (edad_antes != df['Edad']).sum()
 reporte['Edad_invalidas'] = df['Edad'].isna().sum()
 
 # 3.2.2 Estandarizar fechas
 fechas_antes = df['Fecha_Consulta'].copy()
-df['Fecha_Consulta'] = df['Fecha_Consulta'].astype(str).str.replace(r"[./]", "-", regex=True) # Todo "." es transformado a -
-df['Fecha_Consulta'] = df['Fecha_Consulta'].apply(procesarFecha) # Se define el uso de una función
+df['Fecha_Consulta'] = df['Fecha_Consulta'].astype(str).str.replace(r"[./]", "-", regex=True)
+df['Fecha_Consulta'] = df['Fecha_Consulta'].apply(procesarFecha)
 reporte['Fechas_invalidas'] = (fechas_antes != df['Fecha_Consulta']).sum()
 reporte['Fechas_nulas'] = df['Fecha_Consulta'].isna().sum()
 
