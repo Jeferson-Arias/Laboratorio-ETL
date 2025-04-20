@@ -21,4 +21,4 @@ Trabajaremos con un dataset simulado de registros de pacientes médicos que cont
 
 **Programming lenguage:** Python.
 
-**Library:** Pandas.
+**Library:** Pandas, text2num, gender_guesser, numpy
