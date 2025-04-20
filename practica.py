@@ -1,8 +1,10 @@
 # Importación de librerías
-import pandas as pd
-import numpy as np
+from imports import *
 
-# Extracción de datos
+# Importar funciones definidas en otro archivo
+from funciones import *
+
+# 2. Extracción de datos
 df = pd.read_csv('pacientes_sucio.csv', encoding='latin1') # Lectura del excel, se utiliza latin1 para leer caracteres especiales
 
 # Configuración y visualización de los 5 primeros datos con todas sus columnas
