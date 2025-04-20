@@ -1,0 +1,10 @@
+﻿ID_Paciente,Nombre,Edad,Género,Fecha_Consulta,Peso_kg,Altura_cm,Presión_Arterial,Teléfono,Email,Diagnóstico,Presion_Sistolica,Presion_Diastolica,IMC,Clasificacion_Presion
+P001,Juan Pérez,35,M,2023-01-15,70.5,172,120/80,5551234567,juan@email.com,Hipertensión,120,80,23.830448891292594,Hipertensión Grado 1
+P002,María González,28,F,2023-02-15,58.2,165,110/70,5552345678,maria@email.com,Diabetes,110,70,21.377410468319564,Normal
+P003,Paciente_P003,42,M,2023-03-10,81.7,178,130/85,5553456789,carlos@email.com,Asma,130,85,25.785885620502462,Hipertensión Grado 1
+P004,Carlos Ruiz,30,M,2023-04-22,75.0,170,140/90,5554567890,cr@email.com,Hipertensión,140,90,25.95155709342561,Hipertensión Grado 2
+P005,Ana López,29,F,2023-05-23,62.3,160,115/75,5555678901,ana@email.com,Migraña,115,75,24.335937499999993,Normal
+P006,Luisa Fernández,50,F,2023-06-10,68.9,168,125/82,5556789012,luisa@email.com,Diabetes,125,82,24.411848072562364,Hipertensión Grado 1
+P007,Pedro Martínez,33,M,2023-07-18,85.1,182,135/88,,pedro@email.com,Artritis,135,88,25.691341625407556,Hipertensión Grado 1
+P008,Sofía Vargas,5,F,2023-08-30,59.8,163,118/78,5557890123,sofia@email.com,Depresión,118,78,22.507433475102562,Normal
+P009,Jorge Silva,41,M,2023-09-05,72.4,175,155/102,5558901234,jorge@email.com,Hipertensión,155,102,23.640816326530615,Hipertensión Grado 2
