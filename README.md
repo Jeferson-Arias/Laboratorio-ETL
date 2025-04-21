@@ -3,7 +3,7 @@
 **Objetivo del Laboratorio:** Implementar un proceso ETL (Extract, Transform, Load) que lea datos desde un archivo externo y en Python realice las operaciones de limpieza y transformación en un conjunto de datos desordenados y con problemas comunes como valores faltantes, formatos inconsistentes y datos erróneos. Finalmente, guarde el resultado en un nuevo
 archivo externo (.csv).
 
-**Tener en cuenta que este apartado es una versión portable.**
+**Tener en cuenta que esta rama es una versión portable.**
 
 ## Dataset Propuesto
 
