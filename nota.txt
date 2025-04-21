@@ -1,3 +1,5 @@
+Recordar que debe de existir una carpeta output, es en la cual se va a almacenar los dos archivos exportables
+
 Código a utilizar
 
 docker-compose up --build
