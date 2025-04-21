@@ -1,0 +1,3 @@
+Código a utilizar
+
+docker-compose up --build
